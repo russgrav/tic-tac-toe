@@ -1,0 +1,95 @@
+@font-face {
+  font-family: ArcadeClassic;
+  src: url(ARCADECLASSIC.TTF);
+}
+
+* {
+  font-family: ArcadeClassic;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+.menu {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.player {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #fafafa;
+}
+
+.clicked {
+  background-color: #333333;
+  color: #fafafa;
+}
+
+.board-container {
+  width: 500px;
+  height: 500px;
+  box-shadow: -2px 2px 10px lightgray;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: solid 1px #333333;
+}
+
+.boardCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  border: solid 2px #333333;
+}
+
+.boardCell:hover {
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+.winner {
+  background-color: green;
+  color: #fafafa;
+  border-color: lightgreen green green lightgreen;
+}
+
+.board-container > .winner {
+  border-color: #333333;
+}
+
+.board-container > .winner:hover {
+  background-color: green;
+}
+
+.loser {
+  background-color: red;
+  color: #fafafa;
+  border-color: pink red red pink;
+}
+
+.board-container > .loser {
+  border-color: #333333;
+}
+
+.board-container > .loser:hover {
+  background-color: red;
+}
