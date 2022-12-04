@@ -175,6 +175,11 @@ const game = (() => {
         case 'tie':
           player2Button.classList.remove('tie');
           player1Button.classList.remove('tie');
+          if (displayGameBoardModule.clickCounter % 2 == 0) {
+            player2Button.classList.add('clicked');
+          } else {
+            player1Button.classList.add('clicked');
+          }
           boardCells.forEach((boardCell) => {
             boardCell.classList.remove("tie");
             boardCell.textContent = "";
