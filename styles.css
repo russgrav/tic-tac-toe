@@ -51,6 +51,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   border: solid 1px #333333;
+  margin-bottom: 20px;
 }
 
 .boardCell {
@@ -92,4 +93,29 @@ h1 {
 
 .board-container > .loser:hover {
   background-color: red;
+}
+
+.tie {
+  background-color: blue;
+  color: #fafafa;
+  border-color: lightblue blue blue lightblue;
+}
+
+.board-container > .tie {
+  border-color: #333333;
+}
+
+.board-container > .tie:hover {
+  background-color: blue;
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--grey);
+  font-weight: bold;
 }
